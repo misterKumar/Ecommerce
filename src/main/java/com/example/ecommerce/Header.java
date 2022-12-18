@@ -8,6 +8,6 @@ import java.io.IOException;
 public class Header {
     public AnchorPane root;
     Header() throws IOException {
-        root= FXMLLoader.load(getClass().getResource("Header.fxml"));
+        root= FXMLLoader.load(getClass().getResource("header.fxml"));
     }
 }

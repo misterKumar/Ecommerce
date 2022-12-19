@@ -19,7 +19,7 @@ public class loginpageController {
     PasswordField password;
     @FXML
     public void login(MouseEvent e) throws SQLException, IOException {
-        String query=String.format("select * from user where emailId='%s' AND passcode='%s'",email.getText(),password.getText());
+        String query=String.format("select * from user where emailId='%s' AND passcode='%s' ",email.getText(),password.getText());
         //query ="select * from user where emailId='mister@gmail.com' AND passcode='1234'"
         ResultSet res=Main.connection.executeQueries(query);
 
@@ -28,9 +28,6 @@ public class loginpageController {
             if(userType.equals("seller")){
                 AnchorPane sellerpage= FXMLLoader.load(getClass().getResource("sellerpage.fxml"));
                 Main.root.getChildren().add(sellerpage);
-            }
-            else{
-
             }
             System.out.println("The user is exist in the table");
         }

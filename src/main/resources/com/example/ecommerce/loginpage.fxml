@@ -19,12 +19,12 @@
       </Label>
       <Label layoutX="55.0" layoutY="103.0" text="Email" textFill="#efe41c" />
       <Label layoutX="58.0" layoutY="176.0" text="Password" textFill="#eadf0e" />
-      <TextField fx:id="email" layoutX="55.0" layoutY="130.0" prefHeight="26.0" prefWidth="158.0" promptText="Email" />
+      <TextField fx:id="email" layoutX="55.0" layoutY="130.0" prefHeight="26.0" prefWidth="158.0" promptText="abc@gmail.com" />
       <Button layoutX="186.0" layoutY="288.0" mnemonicParsing="false" onMouseClicked="#login" text="Log in">
          <effect>
             <SepiaTone />
          </effect>
       </Button>
-      <PasswordField fx:id="password" layoutX="58.0" layoutY="203.0" prefHeight="26.0" prefWidth="158.0" promptText="password" />
+      <PasswordField fx:id="password" layoutX="58.0" layoutY="203.0" prefHeight="26.0" prefWidth="158.0" promptText="encrypted code" />
    </children>
 </AnchorPane>

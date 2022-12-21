@@ -4,11 +4,13 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ecommerce.loginpageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ecommerce.sellerpageController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#094e41" height="400.0" stroke="BLACK" strokeType="INSIDE" width="500.0" />
       <Label layoutX="36.0" layoutY="27.0" text="sellerpage" textFill="#2fd700">
@@ -19,13 +21,21 @@
       <Label layoutX="52.0" layoutY="91.0" text="ProductName" textFill="#dae100" />
       <Label layoutX="50.0" layoutY="167.0" text="ProductPrice" textFill="#dfc20a" />
       <Label layoutX="52.0" layoutY="249.0" text="SellerId" textFill="#ecd20d" />
-      <TextField layoutX="51.0" layoutY="117.0" promptText="ProductName" />
-      <TextField layoutX="51.0" layoutY="200.0" promptText="ProductPrice" />
-      <TextField layoutX="52.0" layoutY="284.0" promptText="sellerId" />
-      <Button layoutX="240.0" layoutY="332.0" mnemonicParsing="false" text="Add Product">
+      <Label layoutX="250.0" layoutY="249.0" text="AvailableQuantity" textFill="#f2e60e" />
+      <TextField fx:id="name" layoutX="51.0" layoutY="117.0" promptText="Name of the Product" />
+      <TextField fx:id="price" layoutX="51.0" layoutY="200.0" promptText="Price you wanna fix" />
+      <TextField fx:id="sellerid" layoutX="52.0" layoutY="284.0" promptText="abc@gmail.com" />
+      <TextField fx:id="AvailableQuantity" layoutX="249.0" layoutY="284.0" promptText="quanity available" />
+      <Button layoutX="240.0" layoutY="332.0" mnemonicParsing="false" onMouseClicked="#AddProduct" text="Add Product">
          <effect>
             <SepiaTone />
          </effect>
       </Button>
+      <ImageView fitHeight="237.0" fitWidth="250.0" layoutX="242.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/sellerImage.jpeg" />
+         </image>
+      </ImageView>
+
    </children>
 </AnchorPane>

@@ -9,7 +9,7 @@ import java.sql.SQLException;
 
 public class sellerpageController {
     @FXML
-    TextField name,price,sellerid;
+    TextField name,price,sellerid,AvailableQuantity;
     @FXML
     public void AddProduct(MouseEvent e) throws SQLException {
 
@@ -18,7 +18,7 @@ public class sellerpageController {
         if(response2.next()){
             productID=response2.getInt("productID")+1;
         }
-        String query =String.format("Insert into product values (%s,'%s',%s,'%s')",productID,name.getText(),price.getText(),sellerid.getText());
+        String query =String.format("Insert into product values (%s,'%s',%s,'%s',%s)",productID,name.getText(),price.getText(),sellerid.getText(),AvailableQuantity.getText());
         int response =Main.connection.executeUpdate(query);
         if(response>0){
             System.out.println("New product is added");

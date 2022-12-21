@@ -2,8 +2,7 @@ package com.example.ecommerce;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
@@ -24,15 +23,33 @@ public class loginpageController {
         ResultSet res=Main.connection.executeQueries(query);
 
         if(res.next()){
+            Main.emailID=res.getString("emailId");
             String userType = res.getString("userType");
             if(userType.equals("seller")){
                 AnchorPane sellerpage= FXMLLoader.load(getClass().getResource("sellerpage.fxml"));
                 Main.root.getChildren().add(sellerpage);
             }
+            else {
+                System.out.println("We are logged in as buyer");
+                ProductPage productPage=new ProductPage();
+
+                Header header=new Header();
+                AnchorPane productPane=new AnchorPane();
+                productPane.getChildren().add(productPage.products());
+                productPane.setTranslateX(50.0);
+                productPane.setTranslateY(80.0);
+                Main.root.getChildren().clear();
+                Main.root.getChildren().addAll(header.root,productPane);
+            }
             System.out.println("The user is exist in the table");
         }
         else {
-            System.out.println("The user is doesn't exist in the table");
+            Dialog<String> dialog=new Dialog<>();
+            dialog.setTitle("LOGIN");
+            ButtonType type=new ButtonType("OK", ButtonBar.ButtonData.OK_DONE);
+            dialog.getDialogPane().getButtonTypes().add(type);
+            dialog.setContentText("login failed,please check username/password and tryagain");
+            dialog.showAndWait();
         }
     }
 }

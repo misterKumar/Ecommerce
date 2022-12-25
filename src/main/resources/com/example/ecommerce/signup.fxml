@@ -27,12 +27,7 @@
       <TextField fx:id="Name" layoutX="89.0" layoutY="215.0" promptText="Name to register" />
       <TextField fx:id="Type" layoutX="92.0" layoutY="346.0" promptText="Seller or Buyer" />
       <PasswordField fx:id="Passcode" layoutX="89.0" layoutY="283.0" promptText="encrypted code" />
-      <ImageView fitHeight="189.0" fitWidth="200.0" layoutX="262.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Images/welcome.webp" />
-         </image>
-      </ImageView>
-      <Button fx:id="Submit" layoutX="138.0" layoutY="396.0" mnemonicParsing="false" text="Submit" onMouseClicked="#submit">
+      <Button fx:id="Submit" layoutX="138.0" layoutY="396.0" mnemonicParsing="false" onMouseClicked="#submit" text="Submit">
          <effect>
             <SepiaTone />
          </effect>
@@ -40,6 +35,11 @@
       <ImageView fitHeight="48.0" fitWidth="56.0" layoutX="192.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/signup.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="184.0" fitWidth="200.0" layoutX="270.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/welcome Note.jpg" />
          </image>
       </ImageView>
    </children>

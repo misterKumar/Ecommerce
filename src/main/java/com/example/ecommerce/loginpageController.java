@@ -52,4 +52,9 @@ public class loginpageController {
             dialog.showAndWait();
         }
     }
+    @FXML
+    public void signup(MouseEvent e) throws IOException {
+        AnchorPane Sign= FXMLLoader.load(getClass().getResource("signup.fxml"));
+        Main.root.getChildren().add(Sign);
+    }
 }

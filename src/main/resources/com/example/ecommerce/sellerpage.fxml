@@ -10,32 +10,46 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ecommerce.sellerpageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ecommerce.sellerpageController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#094e41" height="400.0" stroke="BLACK" strokeType="INSIDE" width="500.0" />
-      <Label layoutX="36.0" layoutY="27.0" text="sellerpage" textFill="#2fd700">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#094e41" height="500.0" stroke="BLACK" strokeType="INSIDE" width="500.0" />
+      <Label layoutX="26.0" layoutY="13.0" text="SellerPage" textFill="#2fd700">
          <font>
-            <Font size="30.0" />
+            <Font size="44.0" />
          </font>
       </Label>
-      <Label layoutX="52.0" layoutY="91.0" text="ProductName" textFill="#dae100" />
-      <Label layoutX="50.0" layoutY="167.0" text="ProductPrice" textFill="#dfc20a" />
-      <Label layoutX="52.0" layoutY="249.0" text="SellerId" textFill="#ecd20d" />
-      <Label layoutX="250.0" layoutY="249.0" text="AvailableQuantity" textFill="#f2e60e" />
-      <TextField fx:id="name" layoutX="51.0" layoutY="117.0" promptText="Name of the Product" />
-      <TextField fx:id="price" layoutX="51.0" layoutY="200.0" promptText="Price you wanna fix" />
-      <TextField fx:id="sellerid" layoutX="52.0" layoutY="284.0" promptText="abc@gmail.com" />
-      <TextField fx:id="AvailableQuantity" layoutX="249.0" layoutY="284.0" promptText="quanity available" />
-      <Button layoutX="240.0" layoutY="332.0" mnemonicParsing="false" onMouseClicked="#AddProduct" text="Add Product">
+      <Label layoutX="55.0" layoutY="107.0" text="ProductName" textFill="#dae100" />
+      <Label layoutX="58.0" layoutY="192.0" text="ProductPrice" textFill="#dfc20a" />
+      <Label layoutX="55.0" layoutY="301.0" text="SellerId" textFill="#ecd20d" />
+      <Label layoutX="250.0" layoutY="301.0" text="AvailableQuantity" textFill="#f2e60e" />
+      <TextField fx:id="name" layoutX="55.0" layoutY="144.0" promptText="Name of the Product" />
+      <TextField fx:id="price" layoutX="55.0" layoutY="226.0" promptText="Price you wanna fix" />
+      <TextField fx:id="sellerid" layoutX="55.0" layoutY="330.0" promptText="abc@gmail.com" />
+      <TextField fx:id="AvailableQuantity" layoutX="248.0" layoutY="330.0" promptText="quanity available" />
+      <Button layoutX="189.0" layoutY="412.0" mnemonicParsing="false" onMouseClicked="#AddProduct" text="Add Product">
          <effect>
             <SepiaTone />
          </effect>
       </Button>
-      <ImageView fitHeight="237.0" fitWidth="250.0" layoutX="242.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="237.0" fitWidth="250.0" layoutX="243.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/sellerImage.jpeg" />
          </image>
       </ImageView>
+      <Button fx:id="logoutsellbutton" layoutX="421.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#logoutsell" opacity="0.0" text="logout">
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Button>
+      <Button fx:id="loginsellbutton" layoutX="320.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#loginsell" text="login">
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Button>
+      <Label fx:id="email" layoutX="264.0" layoutY="38.0" onMouseClicked="#logoutsellappear" prefHeight="16.0" prefWidth="145.0" textFill="#d95c0e">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Label>
 
    </children>
 </AnchorPane>

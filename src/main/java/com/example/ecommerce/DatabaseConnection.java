@@ -13,7 +13,7 @@ public class DatabaseConnection {
             con= DriverManager.getConnection(SQLURL,username,password);
             if(con!=null) System.out.println("connection is established");
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 //    "select * from temporary";
